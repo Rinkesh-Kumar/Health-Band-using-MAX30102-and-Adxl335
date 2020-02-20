@@ -49,13 +49,13 @@ while(True):
         pass
     blynk.virtual_write(1,params[3][0])
     red, ir = m.read_fifo()
-    if red<=3000 and ir<=3000:
+    if red<=3000 and ir<=3000 and (params[3][0]=='Walking' or params[3][0]=='Running):
         red1=[]
         ir1=[]
         print("No Heart beat detected")
         blynk.virtual_write(3,'Waiting')
         blynk.virtual_write(4,'Waiting')
-    elif red > 3000 and ir > 3000 and len(red1)<80 and len(ir1)<80:
+    elif red > 3000 and ir > 3000 and len(red1)<80 and len(ir1)<80 and params[3][0]=='Resting':
         red1.append(red)
         ir1.append(ir)
         #print("{},{},{}".format(datetime.now(),red,ir))
