@@ -27,3 +27,5 @@ Since the Raspberry Pi does not have a built in Analog to Digital Converter, So 
 |   |   |  INT |  GPIO 07  | 
 
 For Classification amongst the Physical state we have used KNN classifier.
+
+Till now we have completed the first two parts i.e Heart rate adn SpO2 estimation under normal condition and Physical State Detection
